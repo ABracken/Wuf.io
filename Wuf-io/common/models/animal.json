@@ -1,0 +1,39 @@
+{
+  "name": "Animal",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ageRange": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    },
+    "breed": {
+      "type": "string",
+      "required": true
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "animalTypes": {
+      "type": "hasAndBelongsToMany",
+      "model": "animalType",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
